@@ -1,16 +1,17 @@
-$(document).ready(function() {
-  
+// $(document).ready(function() {
 let timeDate = document.querySelector("#currentDay")
 let currentHour = document.querySelectorAll("textarea")
-let saveBtn = document.querySelector("button")
+let saveBtn = document.querySelector(".btnClass")
 let timeNow = parseInt(moment().format("H"))
+//add class "userInput" to text area div
+function primaryFunk(){
+getFromLocalStorage()
+
+$(currentHour).addClass("userInput")
 
 timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
 
-
-// console.log(typeof timeNow)
-
-for (let i = 0; i < currentHour.length; i++) {
+ for(let i = 0; i < currentHour.length; i++) {
     if(parseInt(currentHour[i].id.slice(4)) === timeNow) {
         $(currentHour[i]).addClass("present")
     }
@@ -21,16 +22,35 @@ for (let i = 0; i < currentHour.length; i++) {
         $(currentHour[i]).addClass("past")
     }
 
+    var elements = document.querySelectorAll("button");   
+    for(var i = 0, len = elements.length; i < len; i++) {   
+        // console.log(i)
 
-    // function saveToLocalStorage (){
-    //     localStorage.setItem(timeNow, JSON.stringify(currentHour.textValue))
-    // }
-    // function getFromLocalStorage (){
-    //     JSON.parse(localStorage.getItem(currentHour.textValue))
-    // }
-    // window.localStorage.setItem(JSON.stringify())
-    // JSON.parse(localStorage.getItem())
+        elements[i].addEventListener("click", saveToLocalStorage);
 
-    saveBtn.addEventListener("click",saveToLocalStorage)
+    }
+    }
 
-  });
+    function saveToLocalStorage() {
+    //   console.log(this)
+      var p = this.id
+      var x = "#hour" + p
+      var w = document.querySelector(x).value
+      localStorage.setItem(x, w)
+        
+    }
+
+    function getFromLocalStorage(){
+        for (let i = 9; i <= 19; i++) {
+        var x = "#hour" + i
+        if(localStorage.getItem(x)){
+            var w = (localStorage.getItem(x))
+            let p = document.querySelector(x)
+            p.value = w
+            console.log(w)
+        }
+        }
+        
+    }
+
+    primaryFunk()
