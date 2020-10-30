@@ -16,6 +16,8 @@ I used moment.js to display the current date and to track each row by hour to di
 
 I created a function to save to local storage when you click the save button. Also to get from local storage so that the text blocks hold whatever the user saves in them upon reloading the application.
 
+![Work Day Scheduler](https://user-images.githubusercontent.com/70814349/97759401-2f9f2780-1abe-11eb-9996-18d63c24d027.gif)
+
 ## Getting Started 
 
 This application runs as is in the browser. No downloads or installs needed.
