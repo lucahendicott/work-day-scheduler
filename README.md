@@ -1,6 +1,6 @@
 # Work Day Planner
 
-This is a simple work day planner application. When the user launches the app in their browser, they are presented with time blocks from 8am - 7pm and the top of the page displays the current date. 
+This is a simple work day planner application. When the user launches the app in their browser, they are presented with time blocks from 9am - 7pm and the top of the page displays the current date. 
 
 The time blocks are color coded by time. whichever hour it currently is for the user, that block is red. Any blocks in the future are green and blocks in the past are gray. 
 
