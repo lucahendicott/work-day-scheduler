@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     //set up variables with query selectors
-let timeDate = document.querySelector("#currentDay")
-let currentHour = document.querySelectorAll("textarea")
+let timeDate = $("#currentDay")
+let currentHour = $("textarea")
 let timeNow = parseInt(moment().format("H"))
 
 //primary function kicking things off 
 function primaryFunk(){
-
+    
 getFromLocalStorage()
 
 timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
@@ -25,7 +25,7 @@ timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
     }
 
     //for loop to add event listener on all buttons
-    let elements = document.querySelectorAll("button");   
+    let elements = $("button");   
     for(let i = 0, len = elements.length; i < len; i++) {   
 
     elements[i].addEventListener("click", saveToLocalStorage);
@@ -38,8 +38,9 @@ timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
       let x = "#hour" + p
       let w = document.querySelector(x).value
       localStorage.setItem(x, w)
+      
     }
-
+  
     //function to get saved items from local storage, keeping text area value displayed when pafe refreshes
     function getFromLocalStorage(){
         for (let i = 9; i <= 19; i++) {

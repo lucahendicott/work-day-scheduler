@@ -58,7 +58,7 @@ textarea {
   color: white;
 }
 
-button {
+.btnClass {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -66,7 +66,12 @@ button {
   color: white;
 }
 
-button:hover {
+.btnClass:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#clearBtn:hover{
+  transform: translate(-2px, 1px);
+  font-size: 15px;
 }

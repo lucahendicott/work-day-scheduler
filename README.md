@@ -10,7 +10,7 @@ The applications function is simply saving whatever the user enters into any tex
 
 The directory for this app includes an HTML, CSS and JS file. The HTML is linked to bootsrap and laid out with some simple divs that hold the time, a text area and a save button for each time block. 
 
-In the JS file, I've motly used vanilla JS along with a splash of jQuery syntax. The funcitons to change the text block colors are in this file, they call to add the propper classes created in CSS to recieve the correct colors for the text blocks according to time. 
+In the JS file, I've used jQuery with a splash of vanilla JS syntax. The funcitons to change the text block colors are in this file, they call to add the propper classes created in CSS to recieve the correct colors for the text blocks according to time. 
 
 I used moment.js to display the current date and to track each row by hour to display the proper colors in the text areas. 
 
