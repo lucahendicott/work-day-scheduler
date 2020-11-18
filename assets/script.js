@@ -1,16 +1,16 @@
 $(document).ready(function() {
 
     //set up variables with query selectors
-let timeDate = $("#currentDay")
+let timeDate = document.querySelector("#currentDay")
 let currentHour = $("textarea")
 let timeNow = parseInt(moment().format("H"))
-
+timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
 //primary function kicking things off 
 function primaryFunk(){
     
 getFromLocalStorage()
 
-timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
+
 
 //loop to run through all text areas followed by conditionals to set the color of each text area according to the current time.
  for(let i = 0; i < currentHour.length; i++) {
@@ -53,4 +53,5 @@ timeDate.textContent = moment().format("dddd, MMMM Do YYYY");
         }  
     }
     primaryFunk()
-})
+});
+
